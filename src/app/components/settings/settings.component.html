@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-2">
+    <label>Total Budget</label>
+  </div>
+  <div class="col-md-4">
+    <input type="number" class="form-control" [(ngModel)]="budget">
+  </div>
+  <div class="col-md-4">
+    <button class="btn btn-primary" (click)="update(budget)">Update</button>
+  </div>
+</div>
+<div class="row mt-4">
+    <div class="col-md-2"></div>
+    <div class="col-md-2">
+      <label>Categories</label>
+    </div>
+    <div class="col-md-4">
+      <input type="text" class="form-control" [(ngModel)]="category">
+    </div>
+    <div class="col-md-4">
+      <button class="btn btn-primary" (click)="saveCategory(category)">Add</button>
+    </div>
+</div>
+<div class="row mt-4">
+  <div class="col-md-2"></div>
+  <div class="col-md-3">
+  <div class="card">
+    <div class="card-body">
+      <div *ngFor="let item of list">{{item}}</div>
+    </div>
+  </div>
+  </div>
+</div>
